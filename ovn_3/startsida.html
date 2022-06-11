@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+<div class="container_one">
+
+    <div class="header_div">
+        <h1>Startsida</h1>
+    </div>
+    
+    <div class="outer_box">
+
+        <div class="inner_box_1">
+            Skriv in ett tecken : <input id="character" type="text" maxlength="1">
+        </div>
+
+        <div class="inner_box_2">
+            Skriv in antal rader : <input id="number" type="number">
+            <button type="button" onclick="generateText()">Generate</button>
+        </div>
+    </div>
+
+    <script>
+        function generateText(){
+            var char, amount;
+            char = document.getElementById("character").value;
+            amount = document.getElementById("number").value;
+            document.getElementById("generated_text").innerHTML = ""
+            for (let i = 0; i <amount; i++) {
+                document.getElementById("generated_text").innerHTML += char + "<br/>";
+            }
+        }
+    </script>
+</div>
+
+
+<div class="container_two">
+    <div class="left">
+        <h1>Navigationsbox</h1>
+        <a href="A.html">A</a> <br><br>
+        <a href="B.html">B</a> <br><br>
+        <a href="C.html">C</a> <br><br>
+    </div>
+    
+    <div class="right">
+        <p id="generated_text" >Texten som genereras av ovanstående inputs kommer skrivas ut här!</p>
+    </div>
+</div>
+
+
+</body>
+</html>
